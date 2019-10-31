@@ -1,0 +1,26 @@
+server:
+  port : 8081
+  
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:9090
+  datasource:
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1433;database=master
+    username: sa
+    password: Password_12
+    platform: mssql
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      id:
+        new_generator_mappings:false
+jwt:
+  secret: javainuse
+
+autorizacao:
+  endpoint: http://10.110.0.32:9082/gestao-acessos-web/ws/rest/autenticaUsuario/
+  sistemaId: 4
